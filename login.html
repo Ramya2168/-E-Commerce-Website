@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            
+        </title>
+        <style>
+           
+        </style>
+        <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+           <!-- Optional theme -->
+           <ink rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+           <link rel="stylesheet" type="text/css" href="sty.css">
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+           
+    <body>
+        <nav class="nav nav_top">
+            <div class="logo">
+               <a href="#"> <img src="logo.jfif" width="50"> </a>
+            </div>
+            
+            <div class="nav_side">
+                <a href="ind.html"> Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login/Register</a>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="main_content">
+                <h2>Unlock Your Style</h2><br>
+                <spam>         with all the biggest names in fashion. you'll be 
+                       amazed to find the best designer clothing.
+                </spam>
+                </h2>
+                    
+            </div>
+        </div>
+        <form name="google-sheet" method="post">
+            <h2>Login/Register</h2>
+            <div class="mb-3">
+                <input type="text " class="form-control" placeholder="name" name="Name">
+            
+            </div>
+            <div class="mb-3">
+                <input type="email " class="form-control" placeholder="Email ID" name="Email">
+            
+            </div>
+            <div class="mb-3">
+                <input type="text " class="form-control" placeholder="Number" name="Number">
+            
+            </div>
+           
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzets3LWVh9EukV4uhXtPErDuRxM9zITqf-zq-EUDZkq2fD6ZDiX5MQjwyHMrSPgGM3/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          
+        </script>
+    </body>
+</html>        
